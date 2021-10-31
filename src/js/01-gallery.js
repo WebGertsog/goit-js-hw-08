@@ -8,13 +8,8 @@ import { galleryItems } from './gallery-items';
 
 const galleryContainer = document.querySelector('.gallery');
 
-const imagesMarcap = createGallerysMarkap(galleryItems);
+const imagesMarcap = galleryCardsTpl(galleryItems);
 
 galleryContainer.insertAdjacentHTML('beforeend', imagesMarcap);
-
-
-function createGallerysMarkap (galleryItems){
-  return galleryCardsTpl(galleryItems);
-}
 
 const lightBox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250});
